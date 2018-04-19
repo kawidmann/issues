@@ -38,7 +38,7 @@ defmodule TableFormatterTest do
   test "Output is correct" do
     result = capture_io fn -> TF.print_table_for_columns(simple_test_data(), headers()) end
     assert result == """
-    c1    | c2     | c4   \n------+--------+------\nr1 c1 | r1 c2  | r1 c4\nr2 c1 | r2 c2  | r2 c4\nr3 c1 | r3 c2  | r3 c4\nr4 c1 | r4++c2 | r4 c4
+    c1    | c2     | c4     \n------+--------+--------\nr1 c1 | r1 c2  | r1+++c4\nr2 c1 | r2 c2  | r2 c4  \nr3 c1 | r3 c2  | r3 c4  \nr4 c1 | r4++c2 | r4 c4
     """
   end
 end

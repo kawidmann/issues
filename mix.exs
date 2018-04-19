@@ -4,7 +4,9 @@ defmodule Issues.Mixfile do
   def project do
     [
       app: :issues,
-      version: "0.1.0",
+      version: "0.0.1",
+      name: "Issues",
+      source_url: "https://github.com/kawidmann/issues",
       escript: escript_config(),
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
@@ -22,8 +24,10 @@ defmodule Issues.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      httpoison: "~> 0.9",
-      poison: "~> 2.2"
+      {:httpoison, "~> 0.9"},
+      {:poison, "~> 2.2"},
+      {:ex_doc, "~> 0.12"},
+      {:earmark, "~> 1.0", override: true}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
     ]
